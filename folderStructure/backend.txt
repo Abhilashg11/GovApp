@@ -1,0 +1,70 @@
+backend/
+├── src/
+│   ├── controllers/       # Handles request logic
+│   │   ├── auth.controller.js
+│   │   ├── complaint.controller.js
+│   │   └── user.controller.js
+│
+│   ├── models/            # Mongoose/Sequelize schemas
+│   │   ├── Complaint.js
+│   │   ├── User.js
+│   │   └── Role.js
+│
+│   ├── routes/            # Express routes
+│   │   ├── auth.routes.js
+│   │   ├── complaint.routes.js
+│   │   └── user.routes.js
+│
+│   ├── middlewares/       # Role/auth protection, error handling
+│   │   ├── auth.middleware.js
+│   │   ├── role.middleware.js
+│   │   └── errorHandler.js
+│
+│   ├── services/          # Business logic (DB queries, external calls)
+│   │   ├── complaint.service.js
+│   │   ├── user.service.js
+│   │   └── storage.service.js
+│
+│   ├── utils/             # Helper functions (tokens, maps, etc.)
+│   │   ├── jwt.js
+│   │   └── mapUtils.js
+│
+│   ├── config/            # App, DB, Azure, map configs
+│   │   ├── db.config.js
+│   │   ├── azure.config.js
+│   │   └── map.config.js
+│
+│   ├── app.js             # Main Express app
+│   └── server.js          # Start the server
+│
+├── uploads/               # Temporary image storage if needed
+├── .env                   # Environment variables
+├── package.json
+└── README.md
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Folder/File    | Description                                                  |
+| -------------- | ------------------------------------------------------------ |
+| `controllers/` | Logic to handle requests (calls services, returns response)  |
+| `models/`      | Mongoose (MongoDB) or Sequelize (SQL) schemas                |
+| `routes/`      | Express route declarations (`router.get(...)`)               |
+| `middlewares/` | JWT/role checks, error catchers                              |
+| `services/`    | Business logic (DB actions, cloud storage, AI service calls) |
+| `utils/`       | Token creation, geo location utils, etc.                     |
+| `config/`      | Central place for DB URL, Azure keys, Map API, etc.          |
+| `uploads/`     | (optional) For storing files locally before pushing to Azure |
+| `.env`         | Secrets like DB\_URI, JWT\_SECRET, AZURE\_KEY, etc.          |

@@ -1,0 +1,21 @@
+.wrapper {
+  width: 16rem;                         /* 256px */
+  height: 100vh;           /* Full height minus AppBar height */
+  background-color: white;
+  position: fixed;
+  /* top: 64px;                             */
+  /* left: 0; */
+  overflow-y: auto;
+}
+.top{
+    display: flex;
+    gap: 19vh;
+    align-items: center;
+}
+
+.logo{
+    width: 11vh;
+    height: auto;
+    padding: 5px;
+    display: flex;
+}

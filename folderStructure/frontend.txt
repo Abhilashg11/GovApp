@@ -1,0 +1,74 @@
+frontend/
+├── public/                     # Static files like icons, HTML
+│   └── index.html
+│
+├── src/
+│   ├── assets/                 # Images, icons, logos
+│   └── components/             # Reusable UI components
+│       ├── Navbar.jsx
+│       ├── Sidebar.jsx
+│       ├── MapPicker.jsx
+│       └── FileUploader.jsx
+│
+│   ├── features/               # Feature modules (organized by domain)
+│   │   ├── complaints/
+│   │   │   ├── ComplaintForm.jsx
+│   │   │   ├── ComplaintList.jsx
+│   │   │   ├── ComplaintDetail.jsx
+│   │   │   ├── complaintAPI.js      # Axios calls
+│   │   │   └── complaintSlice.js    # (if using Redux/toolkit)
+│   │   ├── auth/
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   ├── authAPI.js
+│   │   │   └── authSlice.js
+│   │   └── dashboard/
+│   │       ├── Dashboard.jsx
+│   │       └── StatsCard.jsx
+│
+│   ├── layout/                 # App layout (header/sidebar/wrapper)
+│   │   └── MainLayout.jsx
+│
+│   ├── pages/                  # Page-level components for routing
+│   │   ├── LoginPage.jsx
+│   │   ├── ComplaintPage.jsx
+│   │   ├── DashboardPage.jsx
+│   │   └── NotFound.jsx
+│
+│   ├── routes/                 # Protected routing and role-based paths
+│   │   └── AppRoutes.jsx
+│
+│   ├── services/               # Axios setup, interceptors
+│   │   └── axiosInstance.js
+│
+│   ├── context/                # Auth context or role management (if not using Redux)
+│   │   └── AuthProvider.jsx
+│
+│   ├── styles/                 # Global CSS, Tailwind config
+│   │   └── global.css
+│
+│   ├── App.jsx                 # Root component
+│   └── main.jsx                # Entry point
+│
+├── .env                        # VITE_ prefixed env vars
+├── package.json
+└── vite.config.js
+
+
+
+
+
+
+
+
+
+
+| Folder                 | Purpose                                                       |
+| ---------------------- | ------------------------------------------------------------- |
+| `components/`          | Reusable UI elements (buttons, cards, loaders)                |
+| `features/`            | Logical grouping of features like complaints, auth, dashboard |
+| `layout/`              | Page layout (Sidebar, Navbar, etc.)                           |
+| `pages/`               | Route-level views rendered inside layout                      |
+| `routes/`              | Handles role-based and protected routing                      |
+| `services/`            | Centralized Axios setup with token headers                    |
+| `context/` or `store/` | Global state for auth, roles (React Context or Redux)         |
